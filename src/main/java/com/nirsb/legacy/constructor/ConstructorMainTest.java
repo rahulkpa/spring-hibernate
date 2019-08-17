@@ -12,5 +12,9 @@ public class ConstructorMainTest {
 		InjectionThroughConstructor injectionThroughConstructor = context.getBean("injection", InjectionThroughConstructor.class);
 		/* invoking the respective method for above beans*/
 		injectionThroughConstructor.display();
+		/* This peace of code through error as there is no default constructor available for "InjectionThroughConstructor"
+		InjectionThroughConstructor injectionThroughConstructor1 = context.getBean("injection1", InjectionThroughConstructor.class);
+		injectionThroughConstructor1.display();
+		*/
 	}
 }

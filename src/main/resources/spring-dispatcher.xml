@@ -12,6 +12,9 @@
     	<constructor-arg ref="fortuneService"/>
     </bean>
     <bean id="fortuneService"  class="com.nirsb.legacy.constructor.HappyFortuneService"></bean>
+    <!-- should not configure when default constructor is not available in class
+    <bean id="injection1"  class="com.nirsb.legacy.constructor.InjectionThroughConstructor"></bean>
+    -->
     
      
 </beans>
