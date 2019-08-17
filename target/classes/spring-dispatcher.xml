@@ -8,5 +8,10 @@
      
     <bean id="coach1"  class="com.nirsb.legacy.BaseBallCoach"></bean>
     <bean id="coach2"  class="com.nirsb.legacy.CricketCoach"></bean>
+    <bean id="injection"  class="com.nirsb.legacy.constructor.InjectionThroughConstructor">
+    	<constructor-arg ref="fortuneService"/>
+    </bean>
+    <bean id="fortuneService"  class="com.nirsb.legacy.constructor.HappyFortuneService"></bean>
+    
      
 </beans>
