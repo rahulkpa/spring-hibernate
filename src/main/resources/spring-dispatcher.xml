@@ -5,7 +5,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-     <context:property-placeholder location="classpath:sport-info.properties"/> 
+    <context:property-placeholder location="classpath:sport-info.properties"/> 
     <bean id="coach1"  class="com.nirsb.legacy.BaseBallCoach"></bean>
     <bean id="coach2"  class="com.nirsb.legacy.CricketCoach"></bean>
     <bean id="injection"  class="com.nirsb.legacy.constructor.InjectionThroughConstructor">
@@ -18,5 +18,7 @@
      <bean id="loadPojo" class="com.nirsb.legacy.property.LoadPojo">
      	<property name="emailId" value="${teacher.email}"/>
       	<property name="fname" value="${teacher.name}"/>
+     </bean>
+     <bean id="beanTest" class="com.nirsb.legacy.lifecycle.BeanLifeCycle" init-method="initBean" destroy-method="destroyBean">
      </bean>
 </beans>
